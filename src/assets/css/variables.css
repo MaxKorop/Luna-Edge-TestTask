@@ -1,0 +1,22 @@
+:root {
+  /* Background Colors */
+  --background-gradient: linear-gradient(339.02deg, #0d3251 0%, #19476c 103.05%);
+  --background-image: url('../images/tileable-doodle.png');
+  --background-color: #ffffff;
+
+  /* Typography Colors */
+  --color-text-white: #ffffff;
+  --color-text-header: #134267;
+  --color-text-primary: #4f637d;
+  --color-text-secondary: #96caf7;
+  --color-text-placeholder: #c3cad5;
+  --color-text-link: #32abf2;
+  --color-text-non-active: #5d7fa3;
+
+  /* Brand Colors */
+  --color-brand-primary: #32abf2;
+  --color-brand-primary-non-active: #5d7fa3;
+
+  /* Shadow */
+  --box-shadow: 0px 5px 20px 0px #6C758B33;
+}
