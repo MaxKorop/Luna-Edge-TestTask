@@ -1,0 +1,16 @@
+.card-wrapper {
+  background-image: var(--background-image);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.card {
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow);
+  width: 480px;
+  border-radius: 8px;
+  padding-left: 40px;
+  padding-top: 40px;
+}

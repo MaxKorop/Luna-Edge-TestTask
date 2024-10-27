@@ -1,7 +1,13 @@
+import { Card, TimeLineWrapper } from "~/libs/components/components";
+import styles from "./styles.module.css";
+
 const SignUp: React.FC = () => {
   return (
     <>
-      Sign Up
+      <div className={styles["sign-up__wrapper"]}>
+        <TimeLineWrapper />
+        <Card />
+      </div>
     </>
   )
 }

@@ -1,0 +1,25 @@
+.timeline-dot__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.timeline-dot {
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative;
+}
+
+.timeline-connector {
+  height: 40px;
+}
+
+.check-icon {
+  position: absolute;
+  color: var(--color-brand-primary);
+  font-size: 32px;
+  padding: 0 !important;
+  margin: 0 !important;
+}

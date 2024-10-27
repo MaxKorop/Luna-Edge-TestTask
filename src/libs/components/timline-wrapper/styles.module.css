@@ -1,0 +1,5 @@
+.timeline-wrapper {
+  width: 568px;
+  height: 100vh;
+  background: var(--background-gradient);
+}
