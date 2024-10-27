@@ -1,5 +1,7 @@
 type IconName =
   | "racoon"
-  | "chad";
+  | "chad"
+  | "checkOutlined"
+  | "check";
 
 export { type IconName };
