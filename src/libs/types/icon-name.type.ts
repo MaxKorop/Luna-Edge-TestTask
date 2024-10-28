@@ -2,6 +2,8 @@ type IconName =
   | "racoon"
   | "chad"
   | "checkOutlined"
-  | "check";
+  | "check"
+  | "eyeOpen"
+  | "eyeClose";
 
 export { type IconName };
