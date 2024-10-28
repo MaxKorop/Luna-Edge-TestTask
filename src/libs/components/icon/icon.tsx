@@ -4,12 +4,13 @@ import { iconNameToSvg } from "./libs/maps/maps";
 
 type Properties = {
 	name: IconName;
+	className?: string;
 };
 
-const Icon: React.FC<Properties> = ({ name }: Properties) => {
+const Icon: React.FC<Properties> = ({ name, className }: Properties) => {
 	const Icon = iconNameToSvg[name];
 
-	return <Icon />;
+	return <Icon className={className} />;
 };
 
 export { Icon };

@@ -4,6 +4,10 @@ type IconName =
   | "checkOutlined"
   | "check"
   | "eyeOpen"
-  | "eyeClose";
+  | "eyeClose"
+  | "timelinePointActive"
+  | "timelinePointNonActive"
+  | "googleIcon"
+  | "googleIconSquare";
 
 export { type IconName };
