@@ -1,0 +1,32 @@
+.card-wrapper {
+    background-image: var(--background-image);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+  
+.card {
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    width: 480px;
+    border-radius: 8px;
+    padding: 40px;
+    min-height: 350px;
+}
+
+.header{
+    color: var(--color-text-header);
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+}
+  
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
