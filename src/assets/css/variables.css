@@ -3,6 +3,7 @@
   --background-gradient: linear-gradient(339.02deg, #0d3251 0%, #19476c 103.05%);
   --background-image: url('../images/tileable-doodle.png');
   --background-color: #ffffff;
+  --background-input: #f8f9fc;
 
   /* Typography Colors */
   --color-text-white: #ffffff;
@@ -10,11 +11,13 @@
   --color-text-primary: #4f637d;
   --color-text-secondary: #96caf7;
   --color-text-placeholder: #c3cad5;
+  --color-text-input: #030e16;
   --color-text-link: #32abf2;
   --color-text-non-active: #5d7fa3;
 
   /* Brand Colors */
   --color-brand-primary: #32abf2;
+  --color-brand-primary-hover: #1c93d8;
   --color-brand-primary-non-active: #5d7fa3;
 
   /* Shadow */
