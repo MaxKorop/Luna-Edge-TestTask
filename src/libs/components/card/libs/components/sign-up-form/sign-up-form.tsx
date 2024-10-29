@@ -26,7 +26,7 @@ const SignUpForm: React.FC = () => {
       });
       setCurrentStage?.(currentStage + 1);
     },
-    [currentStage, setUser, setCurrentStage]
+    [email, name, password, currentStage, setUser, setCurrentStage]
   )
 
   return (

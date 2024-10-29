@@ -12,7 +12,7 @@ const WelcomePage: React.FC = () => {
         <ChadHeader/>
         <div className={styles["text"]}>
           <span className={styles["header"]}>Hello Luna Edge, </span>
-          <span className={styles["header"]}>My name is {user?.name}.</span>
+          <span className={styles["header"]}>My name is {user!.name}.</span>
         </div>
       </div>
     </div>

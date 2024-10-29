@@ -33,7 +33,7 @@ const App: React.FC = () => {
     { number: 3, finished: false, active: false, label: 'Connect your customer support email' },
     { number: 4, finished: false, active: false, label: 'Done' }
   ]);
-  const [isStoreConnected, setIsStoreConnected ] = useState<boolean>(true);
+  const [isStoreConnected, setIsStoreConnected ] = useState<boolean>(false);
   const [isCustomerSupportEmailConnected, setIsCustomerSupportEmailConnected] = useState<boolean>(false);
   const [user, setUser] = useState<User>();
 
