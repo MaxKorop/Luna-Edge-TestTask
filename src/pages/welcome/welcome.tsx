@@ -1,10 +1,18 @@
 import { ChadHeader } from "~/libs/components/components";
 import styles from "./styles.module.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Context } from "~/libs/components/app/app";
+import { useNavigate } from "react-router-dom";
 
 const WelcomePage: React.FC = () => {
   const { user } = useContext(Context);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!user?.name) {
+      navigate("/sign-up");
+    }
+  }, [user, navigate]);
 
   return (
     <div className={styles["card-wrapper"]}>
