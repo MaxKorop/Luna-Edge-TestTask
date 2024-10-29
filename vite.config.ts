@@ -12,7 +12,7 @@ const config = ({ mode }: ConfigEnv): ReturnType<typeof defineConfig> => {
     },
     plugins: [react(), svgr()],
     server: {
-      port: Number(VITE_PORT),
+      port: Number(VITE_PORT) || 10000,
     },
     resolve: {
       alias: {
