@@ -1,5 +1,6 @@
 .timeline-container {
   width: 568px;
+  height: 100vh;
   background: var(--background-gradient);
   display: flex;
   flex-direction: column;

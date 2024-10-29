@@ -8,6 +8,7 @@ type IconName =
   | "timelinePointActive"
   | "timelinePointNonActive"
   | "googleIcon"
-  | "googleIconSquare";
+  | "leftArrow"
+  | "rightArrow";
 
 export { type IconName };

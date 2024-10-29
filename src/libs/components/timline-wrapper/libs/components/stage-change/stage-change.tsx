@@ -1,5 +1,5 @@
 import { useCallback, useContext } from "react"; 
-import { Button } from "~/libs/components/components";
+import { Button, Icon } from "~/libs/components/components";
 import styles from "./styles.module.css";
 import { Context } from "~/libs/components/app/app";
 import { useNavigate } from "react-router-dom";
@@ -31,18 +31,30 @@ const StageChange: React.FC = () => {
 
   return (
     <div className={styles["stage-change-container"]}>
-      <Button
+      <div
         className={styles[`${isBackDisabled ? "button-disabled" : "back-button"}`]}
-        disabled={isBackDisabled}
-        label="Back"
         onClick={backHandler}
-      />
-      <Button
+      >
+        <Icon name="leftArrow" />
+        <Button
+          className={styles["button"]}
+          disabled={isBackDisabled}
+          label="Back"
+          onClick={()=>{}}
+        />
+      </div>
+      <div
         className={styles[`${isNextDisabled ? "button-disabled" : "next-button"}`]}
-        disabled={isNextDisabled}
-        label="Next"
         onClick={nextHandler}
-      />
+      >
+        <Button
+          className={styles["button"]}
+          disabled={isNextDisabled}
+          label="Next"
+          onClick={()=>{}}
+        />
+        <Icon name="rightArrow" />
+      </div>
     </div>
   );
 };
