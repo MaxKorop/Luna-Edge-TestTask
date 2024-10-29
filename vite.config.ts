@@ -7,6 +7,7 @@ const config = ({ mode }: ConfigEnv): ReturnType<typeof defineConfig> => {
   const { VITE_PORT } = loadEnv(mode, process.cwd());
 
   return defineConfig({
+    base: '/',
     build: {
       outDir: 'build',
     },
