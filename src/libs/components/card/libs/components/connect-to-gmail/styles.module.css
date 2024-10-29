@@ -95,3 +95,33 @@
   color: var(--color-text-primary);
   cursor: pointer;
 }
+
+@media (max-width: 880px) {
+  .header {
+    margin-top: 12px;
+  }
+  .list-container {
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .button {
+    width: 200px;
+    height: 100px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .button-icon {
+    width: calc(100% - 2px);
+  }
+  .button-text {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    align-items: center;
+  }
+}

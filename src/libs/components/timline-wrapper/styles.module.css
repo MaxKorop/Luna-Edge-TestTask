@@ -1,13 +1,29 @@
 .timeline-container {
   width: 568px;
-  height: 100vh;
   background: var(--background-gradient);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .timeline-wrapper {
   width: 364px;
   margin-top: 200px;
+}
+
+@media (max-width: 880px) {
+  .timeline-container {
+    width: 250px;
+  }
+  
+  .timeline-wrapper {
+    width: 150px;
+  }
+}
+
+@media (max-width: 550px) {
+  .timeline-container {
+    display: none;
+  }
 }

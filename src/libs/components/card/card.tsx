@@ -22,6 +22,7 @@ const Card: React.FC = () => {
     isCustomerSupportEmailConnected,
     setCurrentStage,
     changeIsStoreConnected,
+    changeIsCustomerSupportEmailConnected,
     changeStage,
   } = useContext(Context);
   const navigate = useNavigate();
@@ -83,7 +84,9 @@ const Card: React.FC = () => {
             )
           : (notUsingGmail
               ? <NotUseGmail
-                  onContinue={handleFinish}
+                  onContinue={() => {
+                    changeIsCustomerSupportEmailConnected?.(true);
+                  }}
                   setNotUsingGmail={setNotUsingGmail}
                 />
               : <ConnectToGmail

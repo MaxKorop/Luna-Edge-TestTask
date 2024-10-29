@@ -1,3 +1,9 @@
 .alice-carousel {
   width: 364px;
 }
+
+@media (max-width: 880px) {
+  .alice-carousel {
+    display: none;
+  }
+}
