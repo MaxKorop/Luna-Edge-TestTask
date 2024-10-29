@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { ChangeEventHandler, useState } from "react";
 import styles from "./styles.module.css";
 import { Icon } from "~/libs/components/components";
+
 type Properties = {
   label: string;
   name: string;
   placeholder: string;
   type?: "text" | "password";
+  value?: string;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 };
 
-const Input: React.FC<Properties> = ({ label, name, placeholder, type = "text" }) => {
+const Input: React.FC<Properties> = ({ label, name, placeholder, onChange, value = "", type = "text" }) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -27,6 +30,8 @@ const Input: React.FC<Properties> = ({ label, name, placeholder, type = "text" }
           placeholder={placeholder}
           type={type === "password" && isPasswordVisible ? "text" : type}
           className={styles["input-field"]}
+          defaultValue={value}
+          onChange={onChange}
         />
         {type === "password" && (
           <div

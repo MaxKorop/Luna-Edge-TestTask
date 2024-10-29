@@ -21,21 +21,36 @@
   line-height: 21px;
 }
 
-.input-wrapper {
-  margin-top: 24px;
+.select-wrapper{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 24px;
+  margin-top: 32px;
+  gap: 8px;
 }
 
-.input {
+.label{
   font-family: Inter;
-  width: 400px;
-  height: 45px; 
+  font-size: 12px;
+  color: var(--color-text-primary);
+  font-family: Inter;
+}
+
+.select{
+  border: none;
+  height: 45px;
+  width: 100%;
+  background-color: var(--background-input);
+  padding-left: 16px;    
+  border-radius: 4px;
   border: none;
   outline: none;
-  background-color: #f8f9fc;
+  font-family: Inter;
+  font-size: 16px;   
+  color: var(--color-text-input);
+}
+
+.select option{
+  color: var(--color-text-primary);
 }
 
 .button{

@@ -4,6 +4,8 @@
   --background-image: url('../images/tileable-doodle.png');
   --background-color: #ffffff;
   --background-input: #f8f9fc;
+  --background-stage-change-button: #134267;
+  --background-stage-change-button-hover: #19517c;
 
   /* Typography Colors */
   --color-text-white: #ffffff;

@@ -5,15 +5,16 @@ type Properties = {
   onClick: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
+  className?: string;
 }
 
-const Button: React.FC<Properties> = ({ label, onClick, type = 'button', disabled = false }) => {
+const Button: React.FC<Properties> = ({ className, label, onClick, type = 'button', disabled = false }) => {
   return (
     <button
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={styles["button"]}
+      className={`${className ?? styles["button"]}`}
     >
       {label}
     </button>

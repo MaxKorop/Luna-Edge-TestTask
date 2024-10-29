@@ -3,37 +3,39 @@ import { SignUp } from "~/pages/sign-up/sign-up";
 import { WelcomePage } from "~/pages/welcome/welcome";
 import { NotFound } from "~/pages/not-found/not-found";
 import { createContext, useState } from "react";
-import { type Stage } from "~/libs/types/types";
+import { type User, type Stage } from "~/libs/types/types";
 
 type AppContext = {
+  currentStage: number;
   stages: Stage[];
-  user?: {
-    email: string;
-    name: string;
-    password: string;
-  };
+  user?: User;
   isStoreConnected: boolean;
   isCustomerSupportEmailConnected: boolean;
+  setCurrentStage?: (payload: number) => void;
+  setUser?: (payload: User) => void;
   changeIsStoreConnected?: (payload: boolean) => void;
   changeIsCustomerSupportEmailConnected?: (payload: boolean) => void;
   changeStage?: (stageNumber: number, callback: (stage: Stage) => Stage) => void;
 }
 
 export const Context = createContext<AppContext>({
+  currentStage: 1,
   stages: [],
   isStoreConnected: false,
   isCustomerSupportEmailConnected: false,
 });
 
 const App: React.FC = () => {
-  const [stages, _setStages] = useState<Stage[]>([
-    { number: 1, finished: true, active: false, label: 'Welcome' },
-    { number: 2, finished: true, active: false, label: 'Connect your Shopify store' },
-    { number: 3, finished: true, active: false, label: 'Connect your customer support email' },
-    { number: 4, finished: false, active: true, label: 'Done' }
+  const [currentStage, setCurrentStage] = useState<number>(1);
+  const [stages, setStages] = useState<Stage[]>([
+    { number: 1, finished: false, active: true, label: 'Welcome' },
+    { number: 2, finished: false, active: false, label: 'Connect your Shopify store' },
+    { number: 3, finished: false, active: false, label: 'Connect your customer support email' },
+    { number: 4, finished: false, active: false, label: 'Done' }
   ]);
-  const [isStoreConnected, setIsStoreConnected ] = useState<boolean>(false);
+  const [isStoreConnected, setIsStoreConnected ] = useState<boolean>(true);
   const [isCustomerSupportEmailConnected, setIsCustomerSupportEmailConnected] = useState<boolean>(false);
+  const [user, setUser] = useState<User>();
 
   const changeIsStoreConnected = (newValue: boolean): void => {
     setIsStoreConnected(newValue);
@@ -43,25 +45,30 @@ const App: React.FC = () => {
     setIsCustomerSupportEmailConnected(newValue);
   }
 
-  // const changeStage = (stageNumber: number, callBack: (stage: Stage) => Stage): void => {
-  //   setStages((prev: Stage[]) => {
-  //     const stageToChange = prev.find((stage: Stage) => stage.number === stageNumber);
-
-  //     return prev;
-  //   })
-  // }
+  const changeStage = (stageNumber: number, callBack: (stage: Stage) => Stage): void => {
+    setStages((prevStages: Stage[]) => {
+      return prevStages.map((stage) => 
+        stage.number === stageNumber ? callBack(stage) : stage
+      );
+    });
+  };
 
   return (
     <Context.Provider value={{
+      currentStage,
       stages,
+      user,
       isStoreConnected,
       isCustomerSupportEmailConnected,
+      setCurrentStage,
+      setUser,
       changeIsStoreConnected,
       changeIsCustomerSupportEmailConnected,
+      changeStage,
     }}>
       <Router>
         <Routes>
-          <Route path="/sign-up/:stage" element={<SignUp />} />
+          <Route path="/sign-up" element={<SignUp />} />
           <Route path="/welcome" element={<WelcomePage />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>

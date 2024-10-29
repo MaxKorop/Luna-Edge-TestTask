@@ -1,0 +1,42 @@
+.stage-change-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+  width: 100%;
+  padding: 0 100px;
+}
+
+.back-button {
+  background-color: var(--background-stage-change-button);
+  width: 85px;
+  height: 33px;
+  color: var(--color-text-secondary);
+  border-radius: 4px;
+  transition: all 0.1s ease-in;
+}
+
+.next-button {
+  background-color: var(--background-stage-change-button);
+  width: 84px;
+  height: 33px;
+  color: var(--color-text-secondary);
+  border-radius: 4px;
+  transition: all 0.1s ease-in;
+}
+
+.back-button:hover {
+  background-color: var(--background-stage-change-button-hover);
+}
+
+.next-button:hover {
+  background-color: var(--background-stage-change-button-hover);
+}
+
+.button-disabled {
+  background-color: transparent;
+  width: 84px;
+  height: 33px;
+  color: var(--color-text-secondary);
+}

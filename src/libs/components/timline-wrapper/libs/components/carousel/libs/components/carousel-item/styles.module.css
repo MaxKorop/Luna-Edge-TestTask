@@ -1,0 +1,28 @@
+.carousel-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  width: 364px;
+  height: 95px;
+  border-radius: 8px;
+  background-color: var(--background-stage-change-button);
+}
+
+.carousel-item-label {
+  color: var(--color-text-secondary);
+  font-family: Eudoxus Sans;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.carousel-item-text {
+  margin-left: 16px;
+  color: var(--color-text-secondary);
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}

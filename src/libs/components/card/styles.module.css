@@ -11,6 +11,6 @@
   box-shadow: var(--box-shadow);
   width: 480px;
   border-radius: 8px;
-  padding-left: 40px;
-  padding-top: 40px;
+  padding: 40px;
+  min-height: 490px;
 }

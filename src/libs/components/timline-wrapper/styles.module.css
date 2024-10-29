@@ -1,5 +1,13 @@
-.timeline-wrapper {
+.timeline-container {
   width: 568px;
   height: 100vh;
   background: var(--background-gradient);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-wrapper {
+  width: 364px;
+  margin-top: 200px;
 }
